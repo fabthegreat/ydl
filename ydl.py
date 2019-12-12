@@ -4,6 +4,7 @@ from feedgen.feed import FeedGenerator
 import os
 import sys
 import argparse
+import main
 
 #TODO:
 # offer download video option
@@ -21,6 +22,7 @@ parser.add_argument("-url", help="Define base url for podcasts, default value:'h
 parser.add_argument("-yturl","--youtube_url", help="Define youtube url to fetch", default ="https://www.youtube.com/watch?v=xJO5GstqTSY&list=PLxzM9a5lhAumFRpcigmGY1QLDYxb4-P2B")
 args = parser.parse_args()
 
+ydlo = main.ydl_object(args)
 
 def fetch_info(url_yt):
     print('Fetching Youtube Link informations...')
@@ -102,7 +104,7 @@ def create_opts(infos,type):
 
 if __name__ == "__main__":
     print('Downloads folder name: {}'.format(args.dir))
-    infos = fetch_info(args.youtube_url)
+    infos = ydlo.infos
 
     # if youtube url linked to a list
     if 'entries' in infos:
