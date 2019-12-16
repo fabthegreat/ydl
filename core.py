@@ -5,6 +5,7 @@ import os
 import sys
 import argparse
 import ydl
+import interface
 
 #TODO:
 # offer download video option
@@ -26,7 +27,7 @@ args = parser.parse_args()
 
 
 if __name__ == "__main__":
-    if not args.interface:
+    if args.interface:
         ydlo = ydl.ydl_object(args)
         ydlo.print_infos()
         ydlo.process_args()
