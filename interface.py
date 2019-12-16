@@ -7,11 +7,11 @@ class Interface(tk.Frame):
         self.create_widgets()
 
     def process(self):
-        print(self.simulate.get())
+        self.vars = {'simulate': self.simulate.get(), 'feed' :
+                     self.feed.get(),'video':self.video.get()}
+        print(self.vars)
 
     def create_widgets(self):
-#        inputs.config(bd=4,bg="blue")
-#        inputs.pack()
 #
         tk.Label(self.master, padx=10,text="Youtube URL",bg="red").grid(row=0)
         tk.Label(self.master, padx=10,text="Folder").grid(row=1)
@@ -22,14 +22,17 @@ class Interface(tk.Frame):
         tk.Entry(self.master,width=70).grid(row=2, column=1,columnspan='8')
 
 
-        self.simulate = tk.IntVar() 
-        tk.Checkbutton(self.master, text="simulate", variable=self.simulate
-                       ).grid(row=3,column=1,sticky='WE')
-    
+        self.simulate = tk.IntVar()
+        self.feed = tk.IntVar()
+        self.video = tk.IntVar()
+
+
+        tk.Checkbutton(self.master, text="simulate", variable=self.simulate).grid(row=3,column=1,sticky='WE')
+        tk.Checkbutton(self.master, text="feed", variable=self.feed).grid(row=3,column=2,sticky='WE')
+        tk.Checkbutton(self.master, text="video only", variable=self.video).grid(row=3,column=3,sticky='WE')
 
         tk.Button(self.master,text='Interrupt').grid(row=4,column=7,sticky='WE')
-        tk.Button(self.master,text='Process', command =
-                  self.process).grid(row=4,column=8,sticky='WE')
+        tk.Button(self.master,text='Process', command = self.process).grid(row=4,column=8,sticky='WE')
 
 
 if __name__ == "__main__":
