@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 import os
+import sys
 
 class Interface(tk.Frame):
     def __init__(self, master=None):
@@ -9,7 +10,11 @@ class Interface(tk.Frame):
         self.create_widgets()
 
     def create_command(self):
-        command = 'python core.py'
+        if os.path.split(sys.argv[0])[1] == 'core.py':
+            command = 'python {}'.format(os.path.abspath(sys.argv[0]))
+        else:
+            command = '{}'.format(os.path.abspath(sys.argv[0]))
+
         for key in self.args:
             if bool(self.args[key].get()):
                 print('{}: Option non vide'.format(key))

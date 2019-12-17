@@ -3,6 +3,7 @@ import youtube_dl
 from feedgen.feed import FeedGenerator
 import os
 import sys
+import __main__
 import argparse
 import ydl
 import interface
@@ -28,7 +29,6 @@ args = parser.parse_args()
 
 
 if __name__ == "__main__":
-    print(args.interface)
     if not args.interface:
         ydlo = ydl.ydl_object(args)
         ydlo.print_infos()
