@@ -26,7 +26,7 @@ class ydl_object:
 
         fg.title(self.infos['title'])
         fg.description('none')
-        fg.link(href=self.args.url,rel='self')
+        fg.link(href=self.args.podcast_url,rel='self')
 
         for item in self.infos['entries']:
             """
@@ -37,7 +37,7 @@ class ydl_object:
             fe.id(item['id'])
             fe.title(item['title'])
             fe.description(item['description'])
-            item_full_path = self.args.url +'/'+self.infos['title']+'/'+item['title']+'.mp3'
+            item_full_path = self.args.podcast_url +'/'+self.infos['title']+'/'+item['title']+'.mp3'
             fe.enclosure(item_full_path,str(item['duration']),'audio/mpeg')
 
         fg.rss_str(pretty=True)

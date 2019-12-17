@@ -6,6 +6,7 @@ import sys
 import argparse
 import ydl
 import interface
+import tkinter as tk
 
 #TODO:
 # offer download video option
@@ -20,16 +21,22 @@ parser.add_argument("-q","--quiet", help="Very quiet option for youtube-dl",acti
 parser.add_argument("-f","--feed", help="Create Podcast feed",action="store_true")
 parser.add_argument("-video", help="Download videos instead of creating audio",action="store_true")
 parser.add_argument("-d","--dir", help="Define download directory for files, default value:'~/Vidéos'", default="~/Vidéos")
-parser.add_argument("-url", help="Define base url for podcasts, default value:'http://podcasts.lutix.org'", default="http://podcasts.lutix.org")
+parser.add_argument("-url","--podcast_url", help="Define base url for podcasts, default value:'http://podcasts.lutix.org'", default="http://podcasts.lutix.org")
 parser.add_argument("-yturl","--youtube_url", help="Define youtube url to fetch", default ="https://www.youtube.com/watch?v=xJO5GstqTSY&list=PLxzM9a5lhAumFRpcigmGY1QLDYxb4-P2B")
 args = parser.parse_args()
 
 
 
 if __name__ == "__main__":
-    if args.interface:
+    print(args.interface)
+    if not args.interface:
         ydlo = ydl.ydl_object(args)
         ydlo.print_infos()
         ydlo.process_args()
     else:
         print('Waiting for interface to be loaded...')
+        root = tk.Tk() #create window
+        root.title("Ydl - Youtube downloader")
+
+        app = interface.Interface(master=root) #create all components inside the window
+        app.mainloop()
