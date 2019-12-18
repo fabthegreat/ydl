@@ -5,7 +5,7 @@ audio file and creates an xml file to listen to them as a podcast.
 
 ## Getting Started
 
-Run python ydl.py -h or ydl -h (from binayr under dist/).
+Run python ydl.py -h or ydl -h (from binary under dist/).
 
 ### Prerequisites
 
@@ -13,7 +13,14 @@ Please check requirements.txt.
 
 ### Installing
 
-Either use binary ydl in dist folder (under Linux OS only) or run python3 over ydl.py.
+Install a virtual environment:
+virtualenv --python=/usr/bin/python3 venv
+
+Activate virtual environment:
+source venv/bin/activate
+
+Install requirements:
+pip install -r requirements.txt
 
 ## Authors
 
