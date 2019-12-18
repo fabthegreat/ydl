@@ -11,7 +11,7 @@ class Interface(tk.Frame):
 
     def create_command(self):
         if os.path.split(sys.argv[0])[1] == 'core.py':
-            command = 'python {}'.format(os.path.abspath(sys.argv[0]))
+            command = 'source {}/venv/bin/activate & {}/venv/bin/python {}'.format(os.path.dirname(os.path.abspath(sys.argv[0])),os.path.dirname(os.path.abspath(sys.argv[0])),os.path.abspath(sys.argv[0]))
         else:
             command = '{}'.format(os.path.abspath(sys.argv[0]))
 
@@ -78,8 +78,10 @@ class Interface(tk.Frame):
 
 
 if __name__ == "__main__":
-    root = tk.Tk() #create window
-    root.title("Ydl - Youtube downloader")
+#    root = tk.Tk() #create window
+#    root.title("Ydl - Youtube downloader")
+#
+#    app = Interface(master=root) #create all components inside the window
+#    app.mainloop()
 
-    app = Interface(master=root) #create all components inside the window
-    app.mainloop()
+    print(os.path.dirname(os.path.abspath(__file__)))

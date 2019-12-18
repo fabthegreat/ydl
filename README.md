@@ -13,13 +13,13 @@ Please check requirements.txt.
 
 ### Installing
 
-Install a virtual environment:
+* Install a virtual environment:
 virtualenv --python=/usr/bin/python3 venv
 
-Activate virtual environment:
+* Activate virtual environment:
 source venv/bin/activate
 
-Install requirements:
+* Install requirements:
 pip install -r requirements.txt
 
 ## Authors
