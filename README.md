@@ -5,7 +5,7 @@ audio file and creates an xml file to listen to them as a podcast.
 
 ## Getting Started
 
-Run python ydl.py -h or ydl -h (from binary under dist/).
+Run python core.py -h. To launch with GUI: python core.py -i from virtual environment. 
 
 ### Prerequisites
 
