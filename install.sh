@@ -10,14 +10,20 @@
 ## deactivate current venv
 #source ./venv/bin/deactivate
 
-# Export virtual environment
+# Clone from repo
+git clone http://github.com/fabthegreat/ydl
+
+# Enter in the newly created dir
+cd ydl
+
 # Create new venv 
-#virtualenv --python=/usr/bin/python<version of python> <path/to/new/virtualenv/>
-# or 
-python3 -m venv venv # to be tested
+virtualenv --python=/usr/bin/python3 venv
 
 #activate new venv
-source ./venv/bin/activate # to be tested wit python3 -m venv
+source venv/bin/activate
 
 # pip install
 pip install -r requirements.txt
+
+# Optional
+sudo apt-get install ffmpeg xterm
