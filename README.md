@@ -6,7 +6,8 @@ audio file and creates an xml file to listen to them as a podcast.
 ## Getting Started
 
 * Run install.sh under Debian based distribution.
-* Run python core.py -h. To launch with GUI: python core.py -i from virtual environment. 
+* Run runGUI.sh , or python core/core.py -i from virtual environment. 
+* Run python core/core.py -h from terminal from virtual environment for more CLI options.
 
 ### Prerequisites
 

@@ -28,3 +28,12 @@ source venv/bin/activate
 # pip install
 pip install -r requirements.txt
 
+# create runGUI.sh
+rm runGUI.sh
+touch runGUI.sh
+echo "#!/bin/bash" > runGUI.sh
+echo "" >> runGUI.sh
+echo cd $(pwd) >> runGUI.sh
+echo "./venv/bin/python3 ./core/core.py -i" >> runGUI.sh
+chmod u+x runGUI.sh
+
