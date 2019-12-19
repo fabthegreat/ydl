@@ -10,6 +10,9 @@
 ## deactivate current venv
 #source ./venv/bin/deactivate
 
+# Optional
+sudo apt-get install ffmpeg xterm virtualenv python3 python3-tk
+
 # Clone from repo
 git clone http://github.com/fabthegreat/ydl
 
@@ -25,5 +28,3 @@ source venv/bin/activate
 # pip install
 pip install -r requirements.txt
 
-# Optional
-sudo apt-get install ffmpeg xterm

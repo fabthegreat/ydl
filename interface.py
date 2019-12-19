@@ -78,10 +78,9 @@ class Interface(tk.Frame):
 
 
 if __name__ == "__main__":
-#    root = tk.Tk() #create window
-#    root.title("Ydl - Youtube downloader")
-#
-#    app = Interface(master=root) #create all components inside the window
-#    app.mainloop()
+    root = tk.Tk() #create window
+    root.title("Ydl - Youtube downloader")
 
-    print(os.path.dirname(os.path.abspath(__file__)))
+    app = Interface(master=root) #create all components inside the window
+    app.mainloop()
+
