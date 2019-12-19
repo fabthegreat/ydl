@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 import sys
+from pathlib import Path
 
 class Interface(tk.Frame):
     def __init__(self, master=None):
@@ -10,10 +11,7 @@ class Interface(tk.Frame):
         self.create_widgets()
 
     def create_command(self):
-        if os.path.split(sys.argv[0])[1] == 'core.py':
-            command = 'source {}/venv/bin/activate & {}/venv/bin/python {}'.format(os.path.dirname(os.path.abspath(sys.argv[0])),os.path.dirname(os.path.abspath(sys.argv[0])),os.path.abspath(sys.argv[0]))
-        else:
-            command = '{}'.format(os.path.abspath(sys.argv[0]))
+        command = '{}/venv/bin/python {}'.format(Path(os.path.dirname(os.path.abspath(sys.argv[0]))).parent,os.path.abspath(sys.argv[0]))
 
         for key in self.args:
             if bool(self.args[key].get()):
