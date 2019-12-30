@@ -3,7 +3,9 @@
 Ydl is a simple python program that downloads youtube videos, converts them into
 audio file and creates an xml file to listen to them as a podcast. 
 
-Another project, far more advanced can be found there: https://github.com/MrS0m30n3/youtube-dl-gui
+Another project, far more advanced can be found there:
+https://github.com/MrS0m30n3/youtube-dl-gui. But this one cannot create feed
+files to listen to audio files as podcast.
 
 ## Getting Started
 
