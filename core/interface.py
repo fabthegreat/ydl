@@ -43,9 +43,9 @@ class Interface(tk.Frame):
 
     def create_widgets(self):
 
-        tk.Label(self.master, padx=10,text="Youtube URL",bg="red").grid(row=0,columnspan='1')
-        tk.Label(self.master, padx=10,text="Folder").grid(row=1,columnspan='1')
-        tk.Label(self.master, padx=10,text="Podcast website root").grid(row=2,columnspan='1')
+        tk.Label(self.master, padx=10,text="Youtube URL",font="Helvetica 10 bold").grid(row=0,columnspan='1',sticky='W')
+        tk.Label(self.master, padx=10,text="Folder",font="Helvetica 10 bold").grid(row=1,columnspan='1',sticky='W')
+        tk.Label(self.master, padx=10,text="Podcast website root",font="Helvetica 10 bold").grid(row=2,columnspan='1',sticky='W')
 
         # Vars attached to args
         self.youtube_url = tk.StringVar()
