@@ -1,6 +1,6 @@
 altgraph==0.16.1
 cachetools==3.1.1
-feedgen==0.8.0
+feedgen==0.9.0
 google-api-python-client==1.7.11
 google-auth==1.7.2
 google-auth-httplib2==0.0.3
