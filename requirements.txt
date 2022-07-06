@@ -5,7 +5,7 @@ google-api-python-client==1.7.11
 google-auth==1.7.2
 google-auth-httplib2==0.0.3
 httplib2==0.14.0
-lxml==4.4.2
+lxml==4.9.1
 numpy==1.17.4
 Pillow==6.2.1
 pkg-resources==0.0.0
